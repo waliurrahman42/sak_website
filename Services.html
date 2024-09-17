@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/saA_fabi.png" type="">
+
+  <title>SAK Service</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* Service Box */
+/* Service Row */
+.service-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 30%; /* Adjust the percentage as needed */
+  box-sizing: border-box;
+}
+
+/* Service Box */
+.box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.box .img-box {
+  margin-bottom: 15px;
+}
+
+.box .detail-box {
+  flex: 1;
+  font-size: 16px;
+}
+
+.btn-read-more {
+  /* background-color: #62d2a2; */
+  color: #62d2a2;
+  /* border: none; */
+  /* padding: 8px 16px;
+  border-radius: 5px; */
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  /* margin-top: 10px; */
+}
+
+.btn-read-more:hover {
+  /* background-color: #22ea93; */
+  color: #1cc079;
+}
+
+
+.modal-header, .modal-footer {
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.modal-body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ /* styles.css */
+.modal-content {
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.modal-content h5 {
+  font-size: 1.25rem;
+  color: #62d2a2;
+}
+
+.modal-content p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+
+   
+    
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- Header -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo_3.png" alt="Logo" style="max-height: 65px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item active"><a class="nav-link" href="Services.html">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+              <!-- <form class="form-inline">
+                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+              </form> -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+  </div>
+ 
+<!-- Service Section -->
+<section class="department_section layout_padding">
+  <div class="department_container">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Our Services</h2>
+        <p>Explore our range of professional services tailored to meet your specific needs.</p>
+      </div>
+
+      <div class="row service-row">
+        <!-- Bookkeeping and Accounting -->
+        <div class="col-md-4 service-item">
+          <div class="box">
+            <div class="img-box"><i class="fa fa-book fa-3x icon-white" aria-hidden="true"></i></div>
+            <div class="detail-box">
+              <h5>Bookkeeping and Accounting</h5>
+              <p>Access a global pool of skilled professionals for tailored online bookkeeping and accounting services.</p>
+              <a class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setBookkeepingContent()">Read More</a>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Taxation -->
+        <div class="col-md-4 service-item">
+          <div class="box">
+            <div class="img-box"><i class="fa fa-calculator fa-3x icon-white" aria-hidden="true"></i></div>
+            <div class="detail-box">
+              <h5>Taxation</h5>
+              <p>Efficient tax management to ensure compliance and provide valuable insights.</p>
+              <a class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setTaxationContent()">Read More</a>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Payroll Processing -->
+        <div class="col-md-4 service-item">
+          <div class="box">
+            <div class="img-box"><i class="fa fa-money fa-3x icon-white" aria-hidden="true"></i></div>
+            <div class="detail-box">
+              <h5>Payroll Processing</h5>
+              <p>Comprehensive payroll services including processing, tax filing, and more.</p>
+              <a class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setPayrollContent()">Read More</a>
+             
+            </div>
+          </div>
+        </div>
+
+        <!-- Financial Statements & Reporting -->
+        <div class="col-md-4 service-item">
+          <div class="box">
+            <div class="img-box"><i class="fa fa-bar-chart fa-3x icon-white" aria-hidden="true"></i></div>
+            <div class="detail-box">
+              <h5>Financial Statements & Reporting</h5>
+              <p>Organized financial records to support business growth and compliance.</p>
+              <a class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setFinancialStatementsContent()">Read More</a>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Audit Support -->
+        <div class="col-md-4 service-item">
+          <div class="box">
+            <div class="img-box"><i class="fa fa-legal fa-3x icon-white" aria-hidden="true"></i></div>
+            <div class="detail-box">
+              <h5>Audit Support</h5>
+              <p>Comprehensive audit services to ensure financial accuracy and compliance.</p>
+              <a class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setAuditSupportContent()">Read More</a>
+             
+            </div>
+          </div>
+        </div>
+      
+
+
+
+
+
+
+
+     
+
+      <div class="col-md-4 service-item">
+        <div class="box">
+          <div class="img-box"><i class="fa fa-life-ring fa-3x icon-white" aria-hidden="true"></i></div>
+          <div class="detail-box">
+            <h5>Lifetime Support</h5>
+            <p>We offer lifetime support for all our services, ensuring you have peace of mind.
+            <a href="#" class="btn-read-more" data-toggle="modal" data-target="#serviceModal" onclick="setLifetimeSupportContent()">Read More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-4 footer_col">
+          <div class="footer_contact">
+            <h4>
+              Reach at..
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +01 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  demo@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="footer_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+       
+        <div class="col-md-6 col-lg-4 mx-auto footer_col">
+          <div class="footer_link_box">
+            <h4>
+              Links
+            </h4>
+
+            <div class="footer_links">
+              <ul class="list-unstyled">
+                <li><a class="active" href="index.html">
+                Home
+              </a></li>
+              <li><a class="" href="about.html">
+                About
+              </a></li>
+              <li><a class="" href="Services.html">
+                Services
+                <li><a class="" href="contact.html">
+                Contact Us
+              </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 footer_col ">
+          <h4>
+            Newsletter
+          </h4>
+          <form action="#">
+            <input type="email" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="#">@Wali<br><br></a>
+          
+            
+        </p>
+      </div>
+    </div>
+  </footer>
+
+   <!-- Service Modal -->
+   <div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="serviceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="serviceModalLabel">Service</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="serviceDescription">
+          <!-- Detailed service content will be inserted here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="wl_btn_box" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function setModalContent(title, content) {
+      document.getElementById('serviceModalLabel').textContent = title;
+      document.getElementById('serviceDescription').innerHTML = content;
+    }
+
+
+    function setBookkeepingContent() {
+      setModalContent('Bookkeeping and Accounting', `
+        <div class="modal-content">
+          <h5>Overview</h5>
+          <p>
+            SAK Accounting enables US-based Accounting & Tax Firms to access a global pool of skilled professionals, tailoring online bookkeeping and related services to meet specific needs. Our team fosters flexibility, streamlined operations, cost reduction, and impeccable compliance. Our experienced bookkeepers, with 1-17 years of experience across various levels, guarantee accurate compliance and cater to individual client requirements. We uphold the core values of professionalism, confidentiality, and precision.
+          </p>
+          <p>
+            We offer virtual accounting and bookkeeping services, helping businesses of all sizes save time and money. The best part of our team is the team which will be allocated to you will be working dedicatedly for you. We follow standardized procedures and systematic processes with the best accounting software and custom financial reporting to a few best third-party software. We understand that all client’s requirements are unique and therefore, we provide personalized accounting and bookkeeping services with customizations that are tailored to fit their unique requirements.
+          </p>
+          <h5>Bookkeeping Services:</h5>
+          <ul>
+            <li>Data Entry</li>
+            <li>Invoice Processing</li>
+            <li>Accounts Receivable Management</li>
+            <li>Bank & Credit Card Reconciliation</li>
+            <li>Inventory Management</li>
+            <li>Fixed Assets Management</li>
+            <li>Loan Account Reconciliation</li>
+            <li>Year End Finalization</li>
+          </ul>
+        </div>
+      `);
+    }
+
+
+
+    function setTaxationContent() {
+  setModalContent('Taxation', `
+    <div class="modal-content">
+      <h5>Taxation Services</h5>
+      <p>
+        Effective tax management is crucial for maintaining accurate financial records and ensuring smooth operations. Here’s a structured tax workflow that can help streamline processes, ensure compliance, and provide valuable insights into the financial health of SAK Accounting.
+      </p>
+      <p>
+        Our services include:
+      </p>
+      <ul>
+        <li>Personal Income Tax Returns for Individuals</li>
+        <li>Tax Preparation for Business</li>
+        <li>Tax Planning</li>
+      </ul>
+    </div>
+  `);
+}
+
+
+function setPayrollContent() {
+  setModalContent('Payroll Processing', `
+    <div class="modal-content">
+      <h5 >Payroll Processing Services</h5>
+      <p >
+        Our knowledgeable team of payroll professionals is dedicated to maintaining accurate and compliant employee payroll records, enabling you to confidently expand your business. Our payroll services encompass a wide range of solutions tailored to your specific needs, including:
+      </p>
+      <ul >
+        <li>Payroll Processing: Efficient and accurate payroll calculations, ensuring timely payment to employees.</li>
+        <li>Tax Filing and Compliance: Management of federal, state, and local tax withholdings, filings, and compliance to avoid penalties.</li>
+        <li>Direct Deposit Services: Convenient and secure direct deposit options for your employees.</li>
+        <li>Employee Self-Service Portals: Online access for employees to view pay stubs, tax documents, and personal information.</li>
+        <li>Garnishment Management: Handling of wage garnishments, deductions, and compliance with court orders.</li>
+        <li>Time and Attendance Tracking: Integration with timekeeping systems to streamline payroll processing.</li>
+        <li>Benefit Administration: Coordination with benefits providers to manage deductions for health insurance, retirement plans, and other benefits.</li>
+        <li>Reporting and Analytics: Detailed payroll reports and analytics to help you understand labor costs and make informed decisions.</li>
+        <li>Employee Onboarding and Offboarding: Seamless integration of new hires into the payroll system and efficient processing of terminations.</li>
+      </ul>
+      <p>
+        With our comprehensive payroll services, you can focus on growing your business while we take care of your payroll needs.
+      </p>
+    </div>
+  `);
+}
+
+
+function setFinancialStatementsContent() {
+  setModalContent('Financial Statements & Reporting', `
+    <div class="modal-content">
+      <h5 >Financial Statements & Reporting Services</h5>
+      <p>
+        Our team of accountants is dedicated to upholding organized and compliant financial records, empowering you to confidently steer business growth. Our financial statement services encompass an array of tailored solutions, including:
+      </p>
+      <ul >
+        <li >Financial Accounting – Financial statements preparation and analysis with IFRS and GAAP compliance.</li>
+        <li >
+          SEC Financial statements services compliance and accuracy with our SEC/OTC financial statement services.
+          <ul >
+            <li>Annual Financial Reporting Support (10-K)</li>
+            <li>Quarterly Financial Reporting Support (10-Q)</li>
+          </ul>
+        </li>
+        <li >SEC Audit and Support</li>
+      </ul>
+    </div>
+  `);
+}
+
+
+function setAuditSupportContent() {
+  setModalContent('Audit Support', `
+    <div class="modal-content">
+      <h5 >Audit Support Services</h5>
+      <p >
+        Our auditing team offers comprehensive and tailored services to ensure financial accuracy and compliance, which is crucial for business growth. Here are some potential customized solutions that your accounting audit services might include:
+      </p>
+      <ul >
+        <li>Financial Analysis: Assessing Financial Performance Comprehensively.</li>
+        <li>Risk Assessment: Identifying Potential Operational Risks.</li>
+        <li>Internal Control Evaluation: Reviewing Internal Process Effectiveness.</li>
+        <li>Regulatory Compliance: Adhering to Legal Financial Rules.</li>
+        <li>Fraud Detection: Uncovering Financial Miscalculation Incidents.</li>
+        <li>Audit Planning: Strategizing for Effective Audits.</li>
+        <li>Data Analysis: Extracting insights from financial data.</li>
+        <li>Reporting: Summarizing audit findings concisely.</li>
+        <li>Continuous Improvement: Enhancing processes for ongoing growth.</li>
+        <li>Advisory Services: Providing financial strategy guidance.</li>
+        <li>Compliance Testing: Ensuring regulatory adherence accuracy.</li>
+        <li>Quality Assurance: Ensuring Audit Process Precision.</li>
+        <li>Ethical Practices: Upholding Integrity Throughout Audits.</li>
+      </ul>
+    </div>
+  `);
+}
+
+
+function setLifetimeSupportContent() {
+  setModalContent('Lifetime Support', `
+    <div class="modal-content">
+      <h5 >Lifetime Support Services</h5>
+      <p >
+        We are committed to providing lifetime support for all our services. Whether you need ongoing assistance or have questions, our dedicated team is here to ensure you have the support you need at every stage.
+      </p>
+      <ul class="support-list">
+        <li >Ongoing Assistance: Our team is always available to help with any queries or issues you may face.</li>
+        <li >Tailored Support: We provide personalized support based on your specific needs and circumstances.</li>
+        <li >24/7 Availability: Get round-the-clock support to keep your business running smoothly.</li>
+        <li >Expert Guidance: Our experts offer continuous advice to optimize your processes and performance.</li>
+        <li >Long-Term Partnership: We build lasting relationships, ensuring your business receives the support it needs over time.</li>
+        <li >Up-to-Date Assistance: Stay informed with the latest updates in compliance, financial regulations, and best practices.</li>
+      </ul>
+    </div>
+  `);
+}
+
+  </script>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
